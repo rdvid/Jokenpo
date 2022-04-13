@@ -1,7 +1,8 @@
 const jokenpo = ["Rock", "Paper", "Scissors"];
+var playerScore = 0;
+var computerScore = 0;
 
-
-// a function who returns randomly one of jonkenpo options
+// a function who returns randomly one of jokenpo options
 function computerPlay(){
     return jokenpo[Math.floor((Math.random() * jokenpo.length))]
 }
@@ -21,27 +22,33 @@ function oneRound(playerSelection, computerSelection){
         if(playerSelection === "Rock"){
             switch(computerSelection){
                 case "Scissors":
+                    playerScore++
                     return "You Win! Rock > Scissors!"
                     break
                 case "Paper":
+                    computerScore++
                     return "You Lose! Paper > Rock!"
                     break
             }
         }else if(playerSelection === "Paper"){
             switch(computerSelection){
                 case "Rock":
+                    playerScore++
                     return "You Win! Paper > Rock!"
                     break
                 case "Scissors":
+                    computerScore++
                     return "You Lose! Scissors > Paper!"
                     break
             }
         }else{
             switch(computerSelection){
                 case "Rock":
+                    computerScore++
                     return "You Lose! Rock > Scissors"
                     break
                 case "Paper":
+                    playerScore++
                     return "You Win! Scissors > Paper"
                     break
             }
@@ -51,9 +58,19 @@ function oneRound(playerSelection, computerSelection){
 
 
 function game(){
-    let score = 0
     for(let cont = 0; cont < 5; cont++){
-        oneRound(prompt("Rock, Paper or Scissors?"), computerPlay())
-        
+        let playerSelection = prompt("Rock, Paper or Scissors?");
+        let computerSelection = computerPlay();
+        console.log(oneRound(playerSelection, computerSelection))
+        console.log(`Player: ${playerScore} X Machine: ${computerScore}`)
+    }
+    if(playerScore === computerScore){
+        console.log("Draw!! Restart page to play again!")
+    }else if(playerScore > computerScore){
+        console.log("You're the Winner!! Press F5 to play again :)")
+    }else{
+        console.log("You Lose! :c Press F5 for an rematch")
     }
 }
+
+game()
