@@ -1,2 +1,2 @@
 # Jokenpo
-a simple game of rock scissor paper made with Javascript
+a game of rock scissor paper made with Javascript
