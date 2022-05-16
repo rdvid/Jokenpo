@@ -24,39 +24,35 @@ function oneRound(playerSelection, computerSelection){
                 case "Scissors":
                     playerScore++
                     return "You Win! Rock > Scissors!"
-                    break
                 case "Paper":
                     computerScore++
                     return "You Lose! Paper > Rock!"
-                    break
             }
         }else if(playerSelection === "Paper"){
             switch(computerSelection){
                 case "Rock":
                     playerScore++
                     return "You Win! Paper > Rock!"
-                    break
                 case "Scissors":
                     computerScore++
                     return "You Lose! Scissors > Paper!"
-                    break
             }
         }else{
             switch(computerSelection){
                 case "Rock":
                     computerScore++
                     return "You Lose! Rock > Scissors"
-                    break
                 case "Paper":
                     playerScore++
                     return "You Win! Scissors > Paper"
-                    break
+                    
             }
         }
     }
 }
 
 
+// 5 rounds of jokenpo
 function game(){
     for(let cont = 0; cont < 5; cont++){
         let playerSelection = prompt("Rock, Paper or Scissors?");
@@ -73,4 +69,3 @@ function game(){
     }
 }
 
-game()

@@ -1,4 +1,45 @@
 *{
-    background-color: black;
-    color: green;
+    color: white;
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('/images/minimalisttexture.png');
+}
+
+#gameScreen{
+    height: 200px;
+    margin: 8% 12%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#gamePad{
+    background-image: url('/images/abstracttexture.jpeg');
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 300px;
+}
+
+#youScore, #cpuScore{
+    border: black solid 3px;
+    border-radius: 12px;
+    height: 140px;
+    width: 140px;
+    margin: 8px 0;
+    background-image: url('/images/plainDark.jpg');
+}
+
+
+.score{
+    height: 140px;
+    width: 140px;
+    text-align: center;
 }

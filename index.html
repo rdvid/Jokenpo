@@ -5,23 +5,35 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1> Jokenpo Game </h1>
+    <div id= "container">
+        <div id="gameScreen">
+            <div class="score">
+                <h2>You</h2>
+                <div id="cpuScore"></div>
+            </div>
 
-    <button> Rock </button>
-    <button> Scissor </button>
-    <button> Paper </button>    
+            <div class="score">
+                <h2>Cpu</h2>
+                <div id="youScore"></div>
+            </div>
+        </div>
+    </div>
 
-    <div id="Score">
-        <h2>Score </h2>
-        <p>Player: </p>
-        <p>Machine: </p>
+    <div id="gamePad">
+        <button id="restartButton"></button>
+        <ul id="buttonList">
+            <li><button class="gamebuttons">Scissors</button></li>
+            <li><button class="gamebuttons">Rock</button></li>
+            <li><button class="gamebuttons">Paper</button></li>
+        </ul>
+        <div id="roundScore"><h2>Score</h2> </div>
     </div>
 
 </body>
-<footer>
-    <p></p>
-</footer>
 
 </html>
