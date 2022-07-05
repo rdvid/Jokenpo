@@ -8,38 +8,83 @@
 }
 
 body{
-    background-image: url('/images/minimalisttexture.png');
+    background: #1e130c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b27a5b, #170d07);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #644230, #170d07); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    flex-direction: column;
+}
+
+#messageScreen{
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    font-size: 20px;
+    background-color: #000;
 }
 
 #gameScreen{
     height: 200px;
-    margin: 8% 12%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#gamePad{
-    background-image: url('/images/abstracttexture.jpeg');
+    margin: 4% 25% 8% 25%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 100%;
-    height: 300px;
+    position: relative;
 }
+
 
 #youScore, #cpuScore{
     border: black solid 3px;
     border-radius: 12px;
-    height: 140px;
-    width: 140px;
-    margin: 8px 0;
-    background-image: url('/images/plainDark.jpg');
+    height: 180px;
+    width: 180px;
+    margin: 8px 8px;
+    background: #000;
+}
+
+.score{
+    height: 100%;
+    width: 200px;
+    text-align: center;
+    font-size: 25px;
+}
+
+#playerWins, #cpuWins{
+    justify-content: center;
+    align-self: center;
+    font-size: 50px;
 }
 
 
-.score{
-    height: 140px;
-    width: 140px;
-    text-align: center;
+#gamePad{
+    background: 'black';
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+}
+
+
+#restartButton{
+    height: 50px;
+    width: 100px;
+    background-image: url('/images/plainDark.jpg');
+    border-radius: 12px;
+    margin: 15px;
+    justify-content: center;
+}
+
+#buttonList{
+    list-style: none;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.gameButtons{
+    height: 80px;
+    width: 80px;
+    background-image: url('/images/plainDark.jpg');
+    border-radius: 50%;
+    margin: 0 8px;
+    padding: 4px;
 }

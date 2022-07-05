@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jokenpo</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id= "container">
+        <div id="messageScreen"></div>
         <div id="gameScreen">
             <div class="score">
                 <h2>You</h2>
-                <div id="cpuScore"></div>
+                <div id="youScore">
+                    <p id="playerWins"></p>
+                </div>
             </div>
 
             <div class="score">
                 <h2>Cpu</h2>
-                <div id="youScore"></div>
+                <div id="cpuScore">
+                    <p id="cpuWins"></p>
+                </div>
             </div>
         </div>
     </div>
 
     <div id="gamePad">
-        <button id="restartButton"></button>
         <ul id="buttonList">
-            <li><button class="gamebuttons">Scissors</button></li>
-            <li><button class="gamebuttons">Rock</button></li>
-            <li><button class="gamebuttons">Paper</button></li>
+            <li><button type="button" class="gameButtons" id="rockButton">Rock</button></li>
+            <li><button type="button" class="gameButtons" id="scissorsButton">Scissors</button></li>
+            <li><button type="button" class="gameButtons" id="paperButton">Paper</button></li>
         </ul>
-        <div id="roundScore"><h2>Score</h2> </div>
     </div>
 
 </body>
