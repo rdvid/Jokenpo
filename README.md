@@ -3,7 +3,7 @@
 a simple game of rock scissors paper made with Html, Javascript and CSS
 
 
-## Getting Started
+# Getting Started
 
 Things you need to play;
 
@@ -19,10 +19,10 @@ Step-by-Step
 - in index.html archive, run the extension (Alt + L + O)
 - a new window will open. enjoy :)
 
-### License
+# License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
-#### Acknowledgments
+# Acknowledgments
 - The Odin Project.
 - A lot of anonymous devs around the internet.
 
